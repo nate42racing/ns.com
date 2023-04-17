@@ -6,3 +6,14 @@
 body {
     background-color: #2B2C2F;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 50px;
+}
+
+.right-arrow {
+    background-color: red;
+    grid-area: 0 / 2;
+}

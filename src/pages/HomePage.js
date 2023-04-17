@@ -4,7 +4,7 @@ function HomePage() {
 
     return (
         <div>
-            <nav>
+            <nav className="right-arrow">
                 <ul>
                     <li>
                         <Link to='/about'>About</Link>
