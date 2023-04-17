@@ -1,24 +1,19 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import routes from './Routes';
+// App.js
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/HomePage';
+import About from './pages/AboutPage';
+import Products from './pages/ContactPage';
 
-function App() {
-  return (
-    <div>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      </nav>
+const App = () => {
+ return (
+    <>
+       <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<About />} />
+       </Routes>
+    </>
+ );
+};
 
-      <Routes>
-        {routes.map((route, index) => (
-          <Route key={index} path={route.path} component={route.component} exact />
-        ))}
-      </Routes>
-    </div>
-  );
-}
-
-export default App
+export default App;
