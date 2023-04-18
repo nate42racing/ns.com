@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 function HomePage() {
 
     return (
-        <div>
-            <nav className="right-arrow">
+        <div  className="right-arrow">
+            <nav>
                 <ul>
                     <li>
                         <Link to='/about'>About</Link>
