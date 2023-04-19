@@ -16,7 +16,7 @@ function PageTemplate({ children }) {
         let entries = Object.entries(menu);
         let foundEntry = entries.find(([key, value]) => value === page);
         let foundKey = foundEntry ? foundEntry[0] : null;
-
+        console.log(Number(foundKey));
         return Number(foundKey);
     }, [menu]);
 
@@ -28,11 +28,9 @@ function PageTemplate({ children }) {
     }, [currentPage, findIndex]);
 
     const handlePage = (newPage) => {
-        setCurrentPage(newPage, () => {
-            setCurrentIndex(findIndex(newPage))
-        });
+        setCurrentPage(newPage);
+        setCurrentIndex(prevIndex => findIndex(newPage)); // Update using functional update form
         navigate(newPage);
-
     };
 
     return (
