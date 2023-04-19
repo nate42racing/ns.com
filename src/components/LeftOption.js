@@ -6,8 +6,8 @@ function LeftOption({ menu, handlePage, index, handleIndex }) {
     const [prevPageIndex, setPrevPageIndex] = useState(index - 1)
 
     useEffect(() => {
-        setPrevPage(menu[index + 1]);
-        setPrevPageIndex(index + 1);
+        setPrevPage(menu[index - 1]);
+        setPrevPageIndex(index - 1);
     }, [index, menu]);
 
     const handleClick = () => {

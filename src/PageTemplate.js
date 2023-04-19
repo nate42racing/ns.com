@@ -27,8 +27,6 @@ function PageTemplate({ children }) {
         setCurrentIndex(findIndex(currentPage))
     }, [currentPage, findIndex]);
 
-    console.log(currentIndex)
-
     const handlePage = (newPage) => {
         setCurrentPage(newPage, () => {
             setCurrentIndex(findIndex(newPage))

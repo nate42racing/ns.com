@@ -17,7 +17,7 @@ function RightOption({ menu, handlePage, index, handleIndex }) {
 
     return (
         <div>
-            {(index <= Object.keys(menu).length) && <button onClick={handleClick}>Go Forward!</button>}
+            {(index < Object.keys(menu).length) && <button onClick={handleClick}>Go Forward!</button>}
         </div>
     );
 };
