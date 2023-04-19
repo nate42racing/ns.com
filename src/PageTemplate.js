@@ -1,6 +1,6 @@
 import LeftOption from "./components/LeftOption";
 import RightOption from "./components/RightOption";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 
 function PageTemplate({ children }) {
@@ -12,12 +12,14 @@ function PageTemplate({ children }) {
         3: '/contact',
     };
 
-    const findIndex = useCallback((page) => {
-        let entries = Object.entries(menu);
-        let foundEntry = entries.find(([key, value]) => value === page);
-        let foundKey = foundEntry ? foundEntry[0] : null;
-        console.log(Number(foundKey));
-        return Number(foundKey);
+    const findIndex = useMemo(() => {
+        return (page) => {
+            let entries = Object.entries(menu);
+            let foundEntry = entries.find(([key, value]) => value === page);
+            let foundKey = foundEntry ? foundEntry[0] : null;
+            console.log(Number(foundKey));
+            return Number(foundKey);
+        };
     }, [menu]);
 
     const [currentPage, setCurrentPage] = useState(window.location.pathname);
