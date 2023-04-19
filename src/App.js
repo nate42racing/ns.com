@@ -2,15 +2,21 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/HomePage';
 import About from './pages/AboutPage';
-import Products from './pages/ContactPage';
+import Contact from './pages/ContactPage';
 import PageTemplate from './PageTemplate';
+import Work from './pages/WorkPage'
 
 const App = () => {
+
+
+
+
    return (
       <PageTemplate>
          <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path='/work' element={<Work />} />
             <Route path="/about" element={<About />} />
          </Routes>
       </PageTemplate>
