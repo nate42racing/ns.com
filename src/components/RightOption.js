@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { GoChevronRight } from 'react-icons/go'
 
 
 function RightOption({ menu, handlePage, index }) {
@@ -15,8 +16,13 @@ function RightOption({ menu, handlePage, index }) {
 
 
     return (
-        <div>
-            {(index < Object.keys(menu).length - 1) && <button onClick={handleClick}>Go Forward!</button>}
+        <div className="fixed inset-y-2/4 right-4">
+            {(index < Object.keys(menu).length - 1) && (
+                <button onClick={handleClick} aria-label="delete">
+                    <span className="text-8xl">
+                        <GoChevronRight />
+                    </span>
+                </button>)}
         </div>
     );
 };

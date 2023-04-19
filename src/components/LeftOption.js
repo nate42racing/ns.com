@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { GoChevronLeft } from "react-icons/go";
 
 
 function LeftOption({ menu, handlePage, index, handleIndex }) {
@@ -15,8 +16,14 @@ function LeftOption({ menu, handlePage, index, handleIndex }) {
     }
 
     return (
-        <div>
-            {(index > 0) && <button onClick={handleClick}>Go Back!</button>}
+        <div className="fixed inset-y-2/4 left-4">
+            {(index > 0) && (
+                <button onClick={handleClick}>
+                    <span className="text-8xl">
+                        <GoChevronLeft />
+                    </span>
+                </button>
+            )};
         </div>
     );
 };

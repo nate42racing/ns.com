@@ -39,10 +39,12 @@ function PageTemplate({ children }) {
     };
 
     return (
-        <div>
+        <div className="grid grid-cols-6 min-h-screen bg-slate-800">
             <LeftOption menu={menu} handlePage={handlePage} index={currentIndex} />
-            {children}
             <RightOption menu={menu} handlePage={handlePage} index={currentIndex} />
+            <div className="col-start-2 col-span-4 row-start-2">
+                {children}
+            </div>
         </div>
     );
 };

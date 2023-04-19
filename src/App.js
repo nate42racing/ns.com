@@ -12,14 +12,16 @@ const App = () => {
 
 
    return (
-      <PageTemplate>
-         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path='/work' element={<Work />} />
-            <Route path="/about" element={<About />} />
-         </Routes>
-      </PageTemplate>
+      <div>
+         <PageTemplate>
+            <Routes>
+               <Route path="/" element={<Home />} />
+               <Route path="/contact" element={<Contact />} />
+               <Route path='/work' element={<Work />} />
+               <Route path="/about" element={<About />} />
+            </Routes>
+         </PageTemplate>
+      </div>
    );
 };
 
