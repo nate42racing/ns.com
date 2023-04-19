@@ -17,7 +17,7 @@ function PageTemplate({ children }) {
         let foundEntry = entries.find(([key, value]) => value === page);
         let foundKey = foundEntry ? foundEntry[0] : null;
 
-        return foundKey;
+        return Number(foundKey);
     };
 
     const [currentPage, setCurrentPage] = useState(window.location.pathname);
@@ -31,9 +31,9 @@ function PageTemplate({ children }) {
 
     return (
         <div>
-            <LeftOption menu={menu} page={currentPage} handlePage={handlePage} index={currentIndex} />
+            <LeftOption menu={menu} handleIndex={setCurrentIndex} handlePage={handlePage} index={currentIndex} />
             {children}
-            <RightOption menu={menu} page={currentPage} />
+            <RightOption menu={menu} handleIndex={setCurrentIndex} handlePage={handlePage} index={currentIndex} />
         </div>
     );
 };

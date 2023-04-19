@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 
 
 function RightOption({ menu, page, handlePage, index }) {
+
+    console.log(index + 1)
     const [nextPage, setnextPage] = useState(menu[index + 1])
     const [nextPageIndex, setnextPageIndex] = useState(index + 1)
 
@@ -16,7 +18,7 @@ function RightOption({ menu, page, handlePage, index }) {
 
     return (
         <div>
-            {(nextPageIndex < Object.keys(menu).length - 1) && <button onClick={handleClick}>Go Back!</button>}
+            {(nextPageIndex < Object.keys(menu).length) && <button onClick={handleClick}>Go Forward!</button>}
         </div>
     );
 };
