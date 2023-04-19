@@ -18,7 +18,7 @@ function RightOption({ menu, handlePage, index }) {
     return (
         <div className="fixed inset-y-2/4 right-4">
             {(index < Object.keys(menu).length - 1) && (
-                <button onClick={handleClick} aria-label="delete">
+                <button onClick={handleClick}>
                     <span className="text-8xl">
                         <GoChevronRight />
                     </span>
