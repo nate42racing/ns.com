@@ -1,26 +1,25 @@
 import { useState, useEffect } from "react";
 
 
-function RightOption({ menu, page, handlePage, index }) {
+function RightOption({ menu, handlePage, index, handleIndex }) {
 
-    console.log(index + 1)
-    const [nextPage, setnextPage] = useState(menu[index + 1])
-    const [nextPageIndex, setnextPageIndex] = useState(index + 1)
+    const [nextPage, setNextPage] = useState(menu[index + 1]);
+    const [nextPageIndex, setNextPageIndex] = useState(index + 1);
 
-    console.log(nextPage)
-    console.log(nextPageIndex)
+    useEffect(() => {
+        setNextPage(menu[index + 1]);
+        setNextPageIndex(index + 1);
+    }, [index, menu]);
 
     const handleClick = () => {
-        handlePage(nextPage)
-        setnextPageIndex(nextPageIndex + 1)
-        setnextPage(menu[nextPageIndex + 1])
+        handlePage(nextPage);
     }
 
     return (
         <div>
-            {(nextPageIndex < Object.keys(menu).length) && <button onClick={handleClick}>Go Forward!</button>}
+            {(index <= Object.keys(menu).length) && <button onClick={handleClick}>Go Forward!</button>}
         </div>
     );
 };
 
-export default RightOption
+export default RightOption;
