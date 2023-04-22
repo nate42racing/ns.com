@@ -1,10 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { MdDensityMedium } from 'react-icons/md';
 import classNames from 'classnames';
 import { Link } from "react-router-dom";
 
 function Dropdown({ navitems, className }) {
     const [isOpen, setIsOpen] = useState(false);
+    const divEl = useRef();
+
+    useEffect(() => {
+        const handler = (event) => {
+            if (!divEl.current) {
+                return;
+            }
+
+            if (!divEl.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('click', handler, true);
+
+        return () => {
+            document.removeEventListener('click', handler);
+        }
+    }, []);
 
     const classes = classNames(className)
 
