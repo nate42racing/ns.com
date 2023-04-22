@@ -29,8 +29,8 @@ function Dropdown({ navitems, className }) {
 
     const renderedNavItems = navitems.map((option) => {
         return (
-            <div key={option.value}>
-                <Link to={option.value} className="text-white">{option.label}</Link>
+            <div className="cursor-pointer mt-5" key={option.value}>
+                <Link to={option.value} className="text-white text-2xl">{option.label}</Link>
             </div>
         );
     });
@@ -41,7 +41,7 @@ function Dropdown({ navitems, className }) {
 
     return (
         <div ref={divEl} className={classes}>
-            <MdDensityMedium onClick={handleClick} className="text-6xl" />
+            <MdDensityMedium onClick={handleClick} className="text-6xl cursor-pointer" />
             {isOpen && <div className="absolute w-full left-0 align-center text-center">{renderedNavItems}</div>}
         </div >
     )
