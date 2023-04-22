@@ -48,7 +48,7 @@ function PageTemplate({ children }) {
 
     return (
         <div className="grid grid-cols-6 min-h-screen bg-slate-800">
-            <Dropdown className="col-start-6" navitems={navitems} />
+            <Dropdown className="col-start-6 justify-self-end mr-8 mt-8" navitems={navitems} />
             <LeftOption menu={menu} handlePage={handlePage} index={currentIndex} />
             <RightOption menu={menu} handlePage={handlePage} index={currentIndex} />
             <div className="col-start-2 col-span-4 row-start-2">

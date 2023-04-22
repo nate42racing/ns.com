@@ -21,8 +21,8 @@ function Dropdown({ navitems, className }) {
 
     return (
         <div className={classes}>
-            <MdDensityMedium onClick={handleClick} />
-            {isOpen && <div className="absolute">{renderedNavItems}</div>}
+            <MdDensityMedium onClick={handleClick} className="text-6xl" />
+            {isOpen && <div className="absolute w-full left-0">{renderedNavItems}</div>}
         </div >
     )
 };
