@@ -2,9 +2,17 @@ import LeftOption from "./components/LeftOption";
 import RightOption from "./components/RightOption";
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import Dropdown from "./components/Dropdown";
 
 function PageTemplate({ children }) {
     const navigate = useNavigate();
+    const navitems = [
+        { label: 'Home', value: 'home' },
+        { label: 'About', value: 'about' },
+        { label: 'Work', value: 'work' },
+        { label: 'Contact', value: 'contact' },
+    ];
+
     const menu = {
         0: '/',
         1: '/about',
@@ -40,6 +48,7 @@ function PageTemplate({ children }) {
 
     return (
         <div className="grid grid-cols-6 min-h-screen bg-slate-800">
+            <Dropdown className="col-start-6" navitems={navitems} />
             <LeftOption menu={menu} handlePage={handlePage} index={currentIndex} />
             <RightOption menu={menu} handlePage={handlePage} index={currentIndex} />
             <div className="col-start-2 col-span-4 row-start-2">

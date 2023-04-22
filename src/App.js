@@ -5,19 +5,19 @@ import About from './pages/AboutPage';
 import Contact from './pages/ContactPage';
 import PageTemplate from './PageTemplate';
 import Work from './pages/WorkPage'
-import Dropdown from './components/Dropdown';
 
 const App = () => {
-   const navitems = [
-      { label: 'Home', value: 'home' },
-      { label: 'About', value: 'about' },
-      { label: 'Work', value: 'work' },
-      { label: 'Contact', value: 'contact' },
-   ];
 
    return (
       <div>
-         <Dropdown navitems={navitems} />
+         <PageTemplate>
+            <Routes>
+               <Route path="/" element={<Home />} />
+               <Route path="/contact" element={<Contact />} />
+               <Route path='/work' element={<Work />} />
+               <Route path="/about" element={<About />} />
+            </Routes>
+         </PageTemplate>
       </div>
    );
 };

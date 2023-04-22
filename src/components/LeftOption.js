@@ -23,7 +23,7 @@ function LeftOption({ menu, handlePage, index, handleIndex }) {
                         <GoChevronLeft />
                     </span>
                 </button>
-            )};
+            )}
         </div>
     );
 };
