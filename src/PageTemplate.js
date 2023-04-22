@@ -7,10 +7,10 @@ import Dropdown from "./components/Dropdown";
 function PageTemplate({ children }) {
     const navigate = useNavigate();
     const navitems = [
-        { label: 'Home', value: 'home' },
-        { label: 'About', value: 'about' },
-        { label: 'Work', value: 'work' },
-        { label: 'Contact', value: 'contact' },
+        { label: 'Home', value: '/' },
+        { label: 'About', value: '/about' },
+        { label: 'Work', value: '/work' },
+        { label: 'Contact', value: '/contact' },
     ];
 
     const menu = {

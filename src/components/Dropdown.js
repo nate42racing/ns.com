@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MdDensityMedium } from 'react-icons/md';
 import classNames from 'classnames';
+import { Link } from "react-router-dom";
 
 function Dropdown({ navitems, className }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,7 @@ function Dropdown({ navitems, className }) {
     const renderedNavItems = navitems.map((option) => {
         return (
             <div key={option.value}>
-                {option.label}
+                <Link to={option.value}>{option.label}</Link>
             </div>
         );
     });
@@ -22,7 +23,7 @@ function Dropdown({ navitems, className }) {
     return (
         <div className={classes}>
             <MdDensityMedium onClick={handleClick} className="text-6xl" />
-            {isOpen && <div className="absolute w-full left-0">{renderedNavItems}</div>}
+            {isOpen && <div className="absolute w-full left-0 align-center text-center">{renderedNavItems}</div>}
         </div >
     )
 };
