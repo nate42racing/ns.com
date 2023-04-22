@@ -3,6 +3,7 @@ import RightOption from "./components/RightOption";
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "./components/Dropdown";
+import Header from "./components/Header";
 
 function PageTemplate({ children }) {
     const navigate = useNavigate();
@@ -48,6 +49,7 @@ function PageTemplate({ children }) {
 
     return (
         <div className="grid grid-cols-6 min-h-screen bg-slate-800">
+            <Header />
             <Dropdown className="col-start-6 justify-self-end mr-8 mt-8" navitems={navitems} />
             <LeftOption menu={menu} handlePage={handlePage} index={currentIndex} />
             <RightOption menu={menu} handlePage={handlePage} index={currentIndex} />
