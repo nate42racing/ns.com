@@ -41,7 +41,7 @@ function Dropdown({ navitems, className }) {
 
     return (
         <div ref={divEl} className={classes}>
-            <MdDensityMedium onClick={handleClick} className="text-6xl cursor-pointer" />
+            <MdDensityMedium onClick={handleClick} className="text-6xl cursor-pointer text-black" />
             {isOpen && <div className="absolute w-full left-0 align-center text-center">{renderedNavItems}</div>}
         </div >
     )
