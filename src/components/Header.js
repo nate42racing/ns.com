@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 
 function Header({ className }) {
-    const classes = classNames(className)
+    const classes = classNames(className, "bg-red-400");
 
-    return <div className="bg-red-400">HEADER</div>
+    return <div className={classes}>HEADER</div>
 };
 
 export default Header;

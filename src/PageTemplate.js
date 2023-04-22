@@ -49,7 +49,7 @@ function PageTemplate({ children }) {
 
     return (
         <div className="grid grid-cols-6 min-h-screen bg-slate-800">
-            <Header />
+            <Header className="col-start-1 col-span-6 h-24" />
             <Dropdown className="col-start-6 justify-self-end mr-8 mt-8" navitems={navitems} />
             <LeftOption menu={menu} handlePage={handlePage} index={currentIndex} />
             <RightOption menu={menu} handlePage={handlePage} index={currentIndex} />
