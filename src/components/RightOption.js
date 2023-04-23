@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { GoChevronRight } from 'react-icons/go'
+import { IoChevronForwardOutline } from 'react-icons/io5'
 
 
 function RightOption({ menu, handlePage, index }) {
@@ -20,7 +20,7 @@ function RightOption({ menu, handlePage, index }) {
             {(index < Object.keys(menu).length - 1) && (
                 <button onClick={handleClick}>
                     <span className="text-8xl">
-                        <GoChevronRight />
+                        <IoChevronForwardOutline />
                     </span>
                 </button>)}
         </div>

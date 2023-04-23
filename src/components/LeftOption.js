@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { GoChevronLeft } from "react-icons/go";
+import { IoChevronBackOutline } from 'react-icons/io5'
 
 
 function LeftOption({ menu, handlePage, index, handleIndex }) {
@@ -20,7 +20,7 @@ function LeftOption({ menu, handlePage, index, handleIndex }) {
             {(index > 0) && (
                 <button onClick={handleClick}>
                     <span className="text-8xl">
-                        <GoChevronLeft />
+                        <IoChevronBackOutline />
                     </span>
                 </button>
             )}
