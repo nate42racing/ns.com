@@ -8,11 +8,11 @@ function RightOption({ menu, handlePage, index }) {
 
     useEffect(() => {
         setNextPage(menu[index + 1]);
-    }, [index]);
+    }, [index, menu]);
 
     const handleClick = () => {
         handlePage(nextPage);
-    }
+    };
 
 
     return (
