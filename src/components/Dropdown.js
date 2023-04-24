@@ -2,10 +2,13 @@ import { useState, useEffect, useRef } from "react";
 import { MdDensityMedium } from 'react-icons/md';
 import classNames from 'classnames';
 import { Link } from "react-router-dom";
+import { useSpring, animated } from "react-spring";
 
 function Dropdown({ navitems, className }) {
     const [isOpen, setIsOpen] = useState(false);
     const divEl = useRef();
+
+    const props = useSpring({opacity: isOpen ? 1 : 0})
 
     useEffect(() => {
         const handler = (event) => {
@@ -29,22 +32,27 @@ function Dropdown({ navitems, className }) {
 
     const renderedNavItems = navitems.map((option) => {
         return (
-            <div className="flex cursor-pointer mt-2" key={option.value}>
-                <Link to={option.value} className=" border-4 border-accent text-gray-100 ml-14 rounded-lg mr-14 text-2xl bg-accent-light grow pt-5 pb-5 opacity-100 hover:opacity-80 transition duration-500">{option.label}</Link>
+            <div className="flex items-center justify-items-start gap-2 cursor-pointer first:mt-0 border-b hover:opacity-60 hover:bg-slate-100" key={option.value}>
+                <MdDensityMedium className="text-black ml-4 text-2xl"/>
+                <Link to={option.value} className="text-slate-500 font-bold rounded-lg text-2xl py-3 transition duration-500">{option.label}</Link>
             </div>
         );
     });
 
     const handleClick = () => {
-        setIsOpen((currentIsOpen) => !currentIsOpen);
+        setIsOpen((isOpen) => !isOpen);
     };
 
     return (
         <div ref={divEl} className={classes}>
             <MdDensityMedium onClick={handleClick} className="text-6xl cursor-pointer text-accent" />
-            <div className="bg-blue-800">
-                {isOpen && <div className="absolute w-full left-0 align-center text-center bg-accent-dark py-14">{renderedNavItems}</div>}
-            </div>
+            
+            {isOpen && (
+                <animated.div style={props} className="absolute bg-gray-50 border shadow-md w-1/5 top-full right-0 align-center text-center mr-4">
+                    {renderedNavItems}
+                </animated.div>
+            )}
+            
 
         </div >
     )

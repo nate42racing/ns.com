@@ -20,7 +20,7 @@ function RightOption({ menu, handlePage, index }) {
             {(index < Object.keys(menu).length - 1) && (
                 <button onClick={handleClick}>
                     <span className="text-9xl">
-                        <IoChevronForwardOutline />
+                        <IoChevronForwardOutline/>
                     </span>
                 </button>)}
         </div>
