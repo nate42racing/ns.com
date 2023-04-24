@@ -29,8 +29,8 @@ function Dropdown({ navitems, className }) {
 
     const renderedNavItems = navitems.map((option) => {
         return (
-            <div className="cursor-pointer mt-5" key={option.value}>
-                <Link to={option.value} className="text-white text-2xl">{option.label}</Link>
+            <div className="flex cursor-pointer mt-2" key={option.value}>
+                <Link to={option.value} className=" border-4 border-accent text-gray-100 ml-14 rounded-lg mr-14 text-2xl bg-accent-light grow pt-5 pb-5 opacity-100 hover:opacity-80 transition duration-500">{option.label}</Link>
             </div>
         );
     });
@@ -41,8 +41,11 @@ function Dropdown({ navitems, className }) {
 
     return (
         <div ref={divEl} className={classes}>
-            <MdDensityMedium onClick={handleClick} className="text-6xl cursor-pointer text-black" />
-            {isOpen && <div className="absolute w-full left-0 align-center text-center">{renderedNavItems}</div>}
+            <MdDensityMedium onClick={handleClick} className="text-6xl cursor-pointer text-accent" />
+            <div className="bg-blue-800">
+                {isOpen && <div className="absolute w-full left-0 align-center text-center bg-accent-dark py-14">{renderedNavItems}</div>}
+            </div>
+
         </div >
     )
 };

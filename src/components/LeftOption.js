@@ -14,10 +14,10 @@ function LeftOption({ menu, handlePage, index, handleIndex }) {
     }
 
     return (
-        <div className="fixed inset-y-2/4 left-4">
+        <div className="fixed inset-y-2/4 left-1 text-gray-500 opacity-30 hover:opacity-100 transition duration-500 ease-in-out">
             {(index > 0) && (
                 <button onClick={handleClick}>
-                    <span className="text-8xl">
+                    <span className="text-9xl">
                         <IoChevronBackOutline />
                     </span>
                 </button>
