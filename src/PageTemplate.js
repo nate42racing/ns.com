@@ -48,8 +48,8 @@ function PageTemplate({ children }) {
     };
 
     return (
-        <div className=" min-h-screen bg-slate-800">
-            <Header className="flex items-center justify-between h-24">
+        <div className=" min-h-screen bg-zinc-800">
+            <Header className="flex items-center justify-between h-24 pt-10" logoPath={"/ns_logo.png"}>
                 <Dropdown className="mr-5" navitems={navitems} />
             </Header>
             <div className="grid grid-cols-6">
