@@ -50,7 +50,7 @@ function PageTemplate({ children }) {
     return (
         <div className=" min-h-screen bg-background">
 
-            <div className="grid grid-cols-6">
+            <div className="grid grid-cols-6 bg-cover bg-hero h-screen before:content-[''] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:bg-slate-50 before:opacity-80 before:-z-50" >
                 <Header className="flex items-center justify-between h-44 col-start-1 col-span-6" logoPath={"/ns_logo.png"}>
                     <Dropdown className="mr-5" navitems={navitems} />
                 </Header>

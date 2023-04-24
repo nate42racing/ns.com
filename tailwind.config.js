@@ -12,7 +12,7 @@ module.exports = {
         'accent-dark': '#FFE6C7',
       },
       backgroundImage: {
-        'hero': "url('hero.jpg')",
+        'hero': "url('../public/hero.jpg')",
       },
     },
   },
