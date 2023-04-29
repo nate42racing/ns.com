@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function HomePage() {
     return (     
-        <motion.div exit={{ x: window.innerWidth, transition: {duration: 0.4 } }} initial={{width: 0}} animate={{width: "100%"}}>
+        <motion.div exit={{opacity:0}} initial={{opacity:0}} animate={{opacity:1}}>
             <div className='flex flex-col mb-64 justify-center items-center text-center font-sans font-family:"Noto Sans"'>
                 <h1 className="text-4xl font-bold text-black">
                     Web Developer, Engineer and Entrepreneur

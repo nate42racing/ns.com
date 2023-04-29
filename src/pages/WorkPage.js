@@ -4,7 +4,7 @@ import CardFlip from "../components/CardFlip";
 
 function WorkPage() {
     return (
-        <motion.div exit={{ x: window.innerWidth, transition: {duration: 0.4 }  }} initial={{width: 0}} animate={{width: "100%"}}>
+        <motion.div exit={{opacity:0}} initial={{opacity:0}} animate={{opacity:1}}>
             <CardFlip />
         </motion.div>
     )
