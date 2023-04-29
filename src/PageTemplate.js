@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "./components/Dropdown";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function PageTemplate({ children }) {
     const navigate = useNavigate();
@@ -50,19 +51,20 @@ function PageTemplate({ children }) {
     return (
         <div className=" min-h-screen bg-background">
 
-            <div className="grid grid-cols-6 bg-cover bg-hero h-screen -z-40 before:content-[''] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:bg-slate-50 before:opacity-80 before:z-0" >
+            <div className="grid grid-cols-6 auto-rows-min bg-cover h-full -z-40" >
 
                 <Header className="flex sticky top-0 z-50 items-center justify-between h-20 col-start-1 col-span-6 bg-white" logoPath={"/ns_logo.png"}>
                     <div>
-                        <Dropdown className="mr-5" navitems={navitems} />           
+                        <Dropdown className="mr-5" navitems={navitems} handlePage={handlePage} />           
                     </div>
                 </Header>
 
                 <LeftOption menu={menu} handlePage={handlePage} index={currentIndex} />
                 <RightOption menu={menu} handlePage={handlePage} index={currentIndex} />
-                <div className="col-start-2 col-span-4 z-20">
+                <div className="pt-40 col-start-2 col-span-4 z-20 mb-40">
                     {children}
                 </div>
+                <Footer handlePage={handlePage} className="bg-red-600 opacity-70 col-start-1 col-span-6 flex flex-col items-center"/>
             </div>
         </div>
     );

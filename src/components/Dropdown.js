@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { MdDensityMedium } from 'react-icons/md';
+import { FiMenu } from 'react-icons/fi';
 import classNames from 'classnames';
 import { Link } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 
-function Dropdown({ navitems, className }) {
+function Dropdown({ navitems, className, handlePage }) {
     const [isOpen, setIsOpen] = useState(false);
     const divEl = useRef();
 
@@ -28,13 +28,14 @@ function Dropdown({ navitems, className }) {
         }
     }, []);
 
-    const classes = classNames(className)
+
+    const classes = classNames(className ,'"font-sans font-family:"Noto Sans"')
 
     const renderedNavItems = navitems.map((option) => {
         return (
             <div className="flex items-center justify-items-start gap-2 cursor-pointer first:mt-0 border-b hover:opacity-60 hover:bg-slate-100" key={option.value}>
-                <MdDensityMedium className="text-black ml-4 text-2xl"/>
-                <Link to={option.value} className="text-slate-500 font-bold rounded-lg text-2xl py-3 transition duration-500">{option.label}</Link>
+                <FiMenu className="text-black ml-4 text-2xl hover:rotate-180"/>
+                <Link to={option.value} onClick = {() => handlePage(option.value)} className="text-slate-500 font-bold rounded-lg text-2xl py-3 transition duration-500">{option.label}</Link>
             </div>
         );
     });
@@ -45,10 +46,10 @@ function Dropdown({ navitems, className }) {
 
     return (
         <div ref={divEl} className={classes}>
-            <MdDensityMedium onClick={handleClick} className="text-6xl cursor-pointer text-accent" />
+            <FiMenu className="text-6xl cursor-pointer text-red-700" onClick={handleClick}/>
             
             {isOpen && (
-                <animated.div style={props} className="absolute bg-gray-50 border shadow-md w-1/5 top-full right-0 align-center text-center mr-4">
+                <animated.div style={props} className="rounded-xl absolute bg-gray-50 border shadow-md w-1/5 top-full right-0 align-center text-center mr-4">
                     {renderedNavItems}
                 </animated.div>
             )}

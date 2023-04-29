@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 
 function Header({ className, children, logoPath }) {
-    const classes = classNames(className, "shadow pl-5 text-white");
+    const classes = classNames(className, "border-b text-black");
 
     return (
         <div className={classes}>
