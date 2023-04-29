@@ -14,7 +14,7 @@ function LeftOption({ menu, handlePage, index, handleIndex }) {
     }
 
     return (
-        <div className="fixed inset-y-2/4 left-1 text-gray-500 opacity-30 hover:opacity-100 transition duration-500 ease-in-out">
+        <div className="z-10 fixed inset-y-2/4 left-1 text-gray-500 opacity-30 hover:opacity-100 transition duration-500 ease-in-out">
             {(index > 0) && (
                 <button onClick={handleClick}>
                     <span className="text-9xl">

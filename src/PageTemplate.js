@@ -51,9 +51,9 @@ function PageTemplate({ children }) {
     return (
         <div className=" min-h-screen bg-background">
 
-            <div className="grid grid-cols-6 auto-rows-min bg-cover h-full -z-40" >
+            <div className="grid grid-cols-6 auto-rows-min bg-cover h-full" >
 
-                <Header className="flex sticky top-0 z-50 items-center justify-between h-20 col-start-1 col-span-6 bg-white" logoPath={"/ns_logo.png"}>
+                <Header className="flex sticky top-0 z-10 items-center justify-between h-20 col-start-1 col-span-6 bg-white" logoPath={"/ns_logo.png"}>
                     <div>
                         <Dropdown className="mr-5" navitems={navitems} handlePage={handlePage} />           
                     </div>
@@ -61,7 +61,7 @@ function PageTemplate({ children }) {
 
                 <LeftOption menu={menu} handlePage={handlePage} index={currentIndex} />
                 <RightOption menu={menu} handlePage={handlePage} index={currentIndex} />
-                <div className="pt-40 col-start-2 col-span-4 z-20 mb-40">
+                <div className="pt-40 col-start-2 col-span-4 mb-40">
                     {children}
                 </div>
                 <Footer handlePage={handlePage} className="bg-red-600 opacity-70 col-start-1 col-span-6 flex flex-col items-center"/>

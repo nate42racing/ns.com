@@ -17,7 +17,7 @@ function RightOption({ menu, handlePage, index }) {
 
 
     return (
-        <div className="fixed inset-y-2/4 right-1 text-gray-500 opacity-30 hover:opacity-100 transition duration-500 ease-in-out">
+        <div className="z-10 fixed inset-y-2/4 right-1 text-gray-500 opacity-30 hover:opacity-100 transition duration-500 ease-in-out">
             {(index < Object.keys(menu).length - 1) && (
                 <Link onClick={handleClick} to={nextPage}>
                     <span className="text-9xl">
