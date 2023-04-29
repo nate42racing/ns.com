@@ -16,7 +16,7 @@ function HomePage() {
                 </div>
                 <div className="flex flex-row justify-items-center gap-8 mt-28">
                     <Button primary>Contact me</Button>
-                    <Button outline>View my resume</Button>
+                    <a href="/resume.pdf"><Button outline>View my resume</Button></a>
                 </div>
             </div>
         </motion.div>
