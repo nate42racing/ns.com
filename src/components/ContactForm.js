@@ -71,7 +71,7 @@ const ContactForm = () => {
               rows="5"
             />
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-20">
             <Button
               primary
               className="focus:outline-none focus:shadow-outline"

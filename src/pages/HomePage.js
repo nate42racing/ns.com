@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 function HomePage() {
     return (     
@@ -15,7 +16,9 @@ function HomePage() {
                     <img src={"/portfolio.jpg"} alt="Portfolio" width="200px" className='rounded-full border-4 border-red-700' />
                 </div>
                 <div className="flex flex-row justify-items-center gap-8 mt-28">
-                    <Button primary>Contact me</Button>
+                    <Link to="/contact">
+                        <Button primary>Contact me</Button>
+                    </Link>
                     <a href="/resume.pdf"><Button outline>View my resume</Button></a>
                 </div>
             </div>
