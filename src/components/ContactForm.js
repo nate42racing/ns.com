@@ -16,7 +16,7 @@ const ContactForm = () => {
   return (
     <div className="mx-20 flex flex-col items-center">
       <h1 className="text-5xl text-center font-semibold">
-        Have a question? How can I help you?
+        Have a question?
       </h1>
       {submitted ? (
         <p className="text-black-500 text-lg mt-60 mb-60">
