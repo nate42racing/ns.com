@@ -10,7 +10,7 @@ function HomePage() {
                     Web Developer, Engineer and Entrepreneur
                 </h1>
                 <h3 className="mt-8 text-2xl">
-                    I build creative and scalable software technologies.
+                    I build creative and scalable software technologies. 1
                 </h3>
                 <div className="mt-24">
                     <img src={"/portfolio.jpg"} alt="Portfolio" width="200px" className='rounded-full border-4 border-red-700' />
