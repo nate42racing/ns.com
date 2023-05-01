@@ -54,7 +54,7 @@ function Dropdown({ navitems, className, handlePage }) {
             <FiMenu className="text-6xl cursor-pointer text-red-700" onClick={handleClick}/>
             
             {isOpen && (
-                <animated.div style={props} className="rounded-xl absolute bg-gray-50 border shadow-md w-1/5 top-full right-0 align-center text-center mr-4">
+                <animated.div style={props} className="rounded-xl absolute bg-gray-50 border shadow-md w-2/4 lg:w top-full right-0 align-center text-center mr-4">
                     {renderedNavItems}
                 </animated.div>
             )}
