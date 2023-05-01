@@ -13,7 +13,7 @@ function WorkPage() {
         },
         {
             title: 'Detailing Quote Generator',
-            img: '/placeholder.img',
+            img: '585logo',
             description: 'Reusable auto detailing form combined with Django back-end API to automatically quote customers with accurate info and scheduling.',
             link: 'link.com',
             buttontext: 'View Codepen',
@@ -45,7 +45,7 @@ function WorkPage() {
                 <h1 className="text-5xl text-black text-center font-semibold">My Work</h1>
                 <p className=" text-lg md:text-xl mx-10 md:mx-40 mt-12 text-center">I have worked with small and large companies to design beautiful sites, applications, and tools for a wide variety of uses.</p>
             </div>
-            <div className="grid mx-10 lg:grid-cols-2 justify-items-stretch gap-8 mt-24">
+            <div className="grid mx-10 lg:grid-cols-2 justify-items-stretch gap-8 mt-24 max-w-4xl">
                 {renderedCards}
             </div>
         </motion.div>

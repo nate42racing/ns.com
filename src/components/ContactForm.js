@@ -21,7 +21,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="mx-20 flex flex-col items-center">
+    <div className="mx-4 md:mx-20 flex flex-col items-center">
       <h1 className="text-5xl text-center font-semibold">
         Have a question?
       </h1>
