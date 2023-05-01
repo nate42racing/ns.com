@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Personal Website
+
+This website is created using React and Tailwind as the primary front-end framework. It is a basic portfolio site with a clean, modern feel to it. There is no major backend database needed for the purpose of the site. I have a few AWS Lambda functions connected to API gateways that run the email/form submissions to send new submissions to my email address.
+
+The site is constantly in development as I learn new things and notice refactor opportunities. I will eventually turn this into a template with easy to enter variables and a more reusable template framework. The next features I am planning to add are as follows:
+
+* Mockup CLI to run site commands and allow visitors a creative way to submit a contact form.
+* Testimonial section
+* Upgraded navbar
+* Mobile friendly
+
+# Create-React-App Default Commands
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
