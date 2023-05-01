@@ -45,7 +45,7 @@ function WorkPage() {
                 <h1 className="text-5xl text-black text-center font-semibold">My Work</h1>
                 <p className="text-xl mx-40 mt-12 text-center">I have worked with small and large companies to design beautiful sites, applications, and tools for a wide variety of uses.</p>
             </div>
-            <div className="grid lg:grid-cols-2 xl:grid-cols-3 justify-items-stretch gap-8 mt-24">
+            <div className="grid lg:grid-cols-2 justify-items-stretch gap-8 mt-24">
                 {renderedCards}
             </div>
         </motion.div>
