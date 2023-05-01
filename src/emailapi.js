@@ -1,11 +1,17 @@
 const EmailSubmit = async (email) => {
-  
-    const payload = {
-      // Include any form data you want to send to the Lambda function
-        'email': email,
-        'contact': 'asda'
+    let data = {
+        'email': '',
+        'name': '',
+        'message': '',
     };
+
+    for (const key in email) {
+        if (data.hasOwnProperty(key)) {
+            data[key] = email[key];
+        }
+    }
   
+    const payload = data;
     try {
       const response = await fetch('https://jbsofbhque.execute-api.us-east-1.amazonaws.com/prod/email', {
         method: 'POST',

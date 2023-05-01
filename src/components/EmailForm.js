@@ -13,7 +13,10 @@ function EmailForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // add email to mailing list here (e.g. using an API call)
-    EmailSubmit(email)
+    const emaildata = {
+      email: email
+    };
+    EmailSubmit(emaildata)
     setEmail("");
     setShowModal(true);
   };

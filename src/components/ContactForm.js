@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import EmailForm from "./EmailForm";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -10,6 +11,12 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here, e.g. send data to a backend API
+    const submissiondata = {
+      name: name,
+      email: email,
+      message: message
+    }
+    EmailForm(submissiondata)
     setSubmitted(true);
   };
 
