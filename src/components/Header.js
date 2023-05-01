@@ -5,7 +5,9 @@ function Header({ className, children, logoPath }) {
 
     return (
         <div className={classes}>
-            <img src={logoPath} alt="NS logo" width="150px" className='ml-5' />
+            <a href="/">
+                <img src={logoPath} alt="NS logo" width="150px" className='ml-5' />
+                </a>
             {children}
         </div>
     );
