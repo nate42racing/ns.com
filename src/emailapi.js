@@ -12,7 +12,6 @@ const EmailSubmit = async (email) => {
         body: JSON.stringify(payload),
         headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
         }
       });
       console.log(await response.json())
