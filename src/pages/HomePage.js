@@ -18,7 +18,7 @@ function HomePage() {
                     <a href="/contact">
                         <Button primary>Contact me</Button>
                     </a>
-                    <a href="/resume.pdf"><Button outline>View my resume</Button></a>
+                    <a href="https://nateshelhartportfolio.s3.amazonaws.com/resume.pdf"><Button outline>View my resume</Button></a>
                 </div>
             </div>
         </motion.div>
