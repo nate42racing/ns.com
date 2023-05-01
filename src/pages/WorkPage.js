@@ -9,24 +9,28 @@ function WorkPage() {
             img: '/placeholder.img',
             description: 'Reusable and responsive portfolio website created with React and AWS.',
             link: 'link.com',
+            buttontext: 'View site',
         },
         {
             title: 'Detailing Quote Generator',
             img: '/placeholder.img',
             description: 'dasda',
             link: 'link.com',
+            buttontext: 'View Codepen',
         },
         {
             title: 'Meal Planner App',
             img: '/placeholder.img',
             description: 'dasda',
             link: 'link.com',
+            buttontext: 'View site',
         },
         {
             title: 'Financial API',
             img: '/placeholder.img',
             description: 'dasda',
             link: 'link.com',
+            buttontext: 'View docs',
         },
     ];
 
