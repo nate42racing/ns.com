@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Modal from "./Modal"; // assuming you have a Modal component in a separate file
 import EmailSubmit from "../emailapi";
+import React from "react";
 
 function EmailForm() {
   const [email, setEmail] = useState("");

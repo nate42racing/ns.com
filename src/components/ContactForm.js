@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
-import EmailForm from "./EmailForm";
+import EmailSubmit from "../emailapi";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -16,7 +16,7 @@ const ContactForm = () => {
       email: email,
       message: message
     }
-    EmailForm(submissiondata)
+    EmailSubmit(submissiondata)
     setSubmitted(true);
   };
 
