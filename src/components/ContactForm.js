@@ -31,8 +31,8 @@ const ContactForm = () => {
         </p>
       ) : (
         <form onSubmit={handleSubmit} className="w-5/6 mx-auto my-40">
-          <div className="flex justify-between">
-            <div className="mb-4 mr-4 w-1/2">
+          <div className="flex flex-col md:flex-row justify-between">
+            <div className="mb-4 mr-4 w-full md:w-1/2">
               <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
                 Name
               </label>
@@ -46,7 +46,7 @@ const ContactForm = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
-            <div className="mb-4 w-1/2">
+            <div className="mb-4 w-full md:w-1/2">
               <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
                 Email
               </label>

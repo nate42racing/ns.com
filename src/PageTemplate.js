@@ -5,9 +5,11 @@ import { useNavigate } from "react-router-dom";
 import Dropdown from "./components/Dropdown";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { useLocation } from "react-router-dom";
 
 function PageTemplate({ children }) {
     const navigate = useNavigate();
+    const location = useLocation();
     const navitems = [
         { label: 'Home', value: '/' },
         { label: 'About', value: '/about' },
@@ -40,6 +42,7 @@ function PageTemplate({ children }) {
 
     useEffect(() => {
         setCurrentIndex(findIndex(currentPage))
+        window.scrollTo(0, 0);
     }, [currentPage, findIndex]);
 
     const handlePage = (newPage) => {
