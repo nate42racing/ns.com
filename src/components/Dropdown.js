@@ -31,11 +31,16 @@ function Dropdown({ navitems, className, handlePage }) {
 
     const classes = classNames(className ,'"font-sans font-family:"Noto Sans"')
 
+    const handleOptionClick = (page) => {
+        handlePage(page);
+        setIsOpen(false);
+    };
+
     const renderedNavItems = navitems.map((option) => {
         return (
             <div className="flex items-center justify-items-start gap-2 cursor-pointer first:mt-0 border-b hover:opacity-60 hover:bg-slate-100" key={option.value}>
                 <FiMenu className="text-black ml-4 text-2xl hover:rotate-180"/>
-                <Link to={option.value} onClick = {() => handlePage(option.value)} className="text-slate-500 font-bold rounded-lg text-2xl py-3 transition duration-500">{option.label}</Link>
+                <Link to={option.value} onClick = {() => (handleOptionClick(option.value))} className="text-slate-500 font-bold rounded-lg text-2xl py-3 transition duration-500">{option.label}</Link>
             </div>
         );
     });

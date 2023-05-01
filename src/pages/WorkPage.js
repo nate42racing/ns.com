@@ -7,7 +7,7 @@ function WorkPage() {
         {
             title: 'Portfolio Website',
             img: '/placeholder.img',
-            description: 'Reusable and responsive portfolio website created with React and AWS.',
+            description: 'Reusable and responsive portfolio website created with React and AWS Amplify/Lamda.',
             link: 'link.com',
             buttontext: 'View site',
         },
