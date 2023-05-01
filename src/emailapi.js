@@ -1,4 +1,4 @@
-const EmailSubmit = async (event, email) => {
+const EmailSubmit = async (email) => {
   
     const payload = {
       // Include any form data you want to send to the Lambda function
