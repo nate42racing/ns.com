@@ -16,9 +16,9 @@ function HomePage() {
                     <img src={"/portfolio.jpg"} alt="Portfolio" width="200px" className='rounded-full border-4 border-red-700' />
                 </div>
                 <div className="flex flex-row justify-items-center gap-8 mt-28">
-                    <Link to="/contact">
+                    <a href="/contact">
                         <Button primary>Contact me</Button>
-                    </Link>
+                    </a>
                     <a href="/resume.pdf"><Button outline>View my resume</Button></a>
                 </div>
             </div>
