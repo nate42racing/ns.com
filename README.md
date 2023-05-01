@@ -1,6 +1,6 @@
 # Personal Website
 
-![alt text](https://github.com/naterocks49/ns.com/public/site.png "Site image")
+![Site image](https://github.com/naterocks49/ns.com/blob/master/public/site.png "Preview")
 
 This website is created using React and Tailwind as the primary front-end framework. It is a basic portfolio site with a clean, modern feel to it. There is no major backend database needed for the purpose of the site. I have a few AWS Lambda functions connected to API gateways that run the email/form submissions to send new submissions to my email address.
 
