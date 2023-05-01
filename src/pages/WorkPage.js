@@ -15,21 +15,21 @@ function WorkPage() {
             title: 'Detailing Quote Generator',
             img: '585logo',
             description: 'Reusable auto detailing form combined with Django back-end API to automatically quote customers with accurate info and scheduling.',
-            link: 'link.com',
+            link: '/',
             buttontext: 'View Codepen',
         },
         {
             title: 'Meal Planner App',
             img: '/placeholder.img',
             description: 'Drag and drop meal planner builder with React/Django. Includes user and registration features. Google calendar-like interface.',
-            link: 'link.com',
+            link: '/',
             buttontext: 'View site',
         },
         {
             title: 'Financial API',
             img: '/placeholder.img',
             description: 'Backend Flask financial API that manages your investment portfolio and assets as well as recommends stocks based on financial anaylsis and data modeling.',
-            link: 'link.com',
+            link: '/',
             buttontext: 'View docs',
         },
     ];
@@ -43,11 +43,11 @@ function WorkPage() {
         <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <div className="flex flex-col items-center">
             <h1 className="text-5xl text-black text-center font-semibold">My Work</h1>
-            <p className="text-lg md:text-xl mx-10 md:mx-40 mt-12 text-center">
+            <p className="text-lg md:text-xl mx-10 lg:mx-40 mt-12 text-center">
               I have worked with small and large companies to design beautiful sites, applications, and tools for a wide variety of uses.
             </p>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center mx-10">
             <div className="grid mx-10 lg:grid-cols-2 justify-items-stretch gap-8 mt-24 max-w-md min-w-full">
               {renderedCards}
             </div>

@@ -15,7 +15,7 @@ function RightOption({ menu, handlePage, index }) {
         handlePage(nextPage);
     };
 
-    const isSmallScreen = useMedia("(max-width: 640px)");
+    const isSmallScreen = useMedia("(max-width: 800px)");
 
     return (
         <div className="z-10 fixed inset-y-2/4 right-1 text-gray-500 opacity-30 hover:opacity-100 transition duration-500 ease-in-out">
